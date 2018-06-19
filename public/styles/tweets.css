@@ -1,19 +1,37 @@
 .container .tweet {
 
     border-radius: 5px;
-    background-color: #bfc2ca40;
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 15px;
     padding-top: 1px;
+    margin-top: 30px;
 
 }
 
-.tweet.header {
+
+.tweet header {
 
     margin-top: 10px;
+    background-color: hsla(225, 9%, 91%, 0.753);
+    width: 100%;
+    padding-bottom: 40px;
 
-    }
+}
+
+.tweet header:hover {
+
+    background-color: grey;
+}
+
+
+.tweet h2 {
+
+    margin: 0;
+    padding: 10px;
+
+}
+
 
 .tweet.footer {
 
@@ -24,11 +42,24 @@
 .tweet textarea {
 
     width: 100%;
+    border-bottom-color: black;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    padding: 10px;
 
 }
 
-.tweet.span {
+.tweet span {
 
-    float: left:
+    float: right;
+    color: grey;
+
+}
+
+.tweet img {
+
+    width: 80px;
+    height: 80px;
+    float: left;
 
 }
