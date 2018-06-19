@@ -19,11 +19,17 @@
     <!-- New-tweet CSS-->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- New-tweet CSS-->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Char counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 
   </head>
@@ -38,7 +44,6 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
             <form action="/tweets/" method="POST">
@@ -47,8 +52,18 @@
               <span class="counter">140</span>
             </form>
           </section>
-
-
+          <section class="tweet">
+            <article>
+              <header>
+                This is the header!
+              </header>
+              <textarea name="text" readonly></textarea>
+              <footer>
+                  @user
+              </footer>
+              <span class="created">X days ago</span>
+            </article>
+          </section>
     </main>
   </body>
 </html>
