@@ -80,14 +80,22 @@ $(document).ready(function () {
   function renderTweets(tweets) {
     tweets.forEach(function (element) {
       var $tweet = createTweetElement(element);
-      $('section.tweet').append($tweet);
+      $('section.tweet').prepend($tweet);
     });
   }
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 
-
+  function loadTweets() {
+    $.ajax({
+      Method: 'GET',
+      url: '/tweets/',
+      success: function(data) {
+        renderTweets(data);
+      }
+    })
+  };
 
 $('form').on('submit', function (tweet) {
 tweet.preventDefault();
@@ -105,24 +113,13 @@ if (message.length > 140) {
 $.ajax('/tweets/', {
   method: 'POST',
   data: data
-}).done(function () {
-  console.log(data)
-  $('form textarea').val('');
+}).done(function (res) {
+  loadTweets(res);
+  $('form textarea').val('')
 })
 };
 });
 
 
-function loadTweets() {
-  $.ajax({
-    Method: 'GET',
-    url: '/tweets/',
-    success: function(data) {
-      renderTweets(data)
-    }
-  });
-};
-
-loadTweets();
 });
 
