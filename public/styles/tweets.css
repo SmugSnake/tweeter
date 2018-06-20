@@ -1,11 +1,13 @@
 .container .tweet {
 
     border-radius: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    padding-top: 1px;
     margin-top: 30px;
+
+}
+
+article.full.tweet {
+
+    border: 2px solid grey;
 
 }
 
@@ -15,7 +17,7 @@ section.tweet:hover header {
 }
 
 
-.tweet header {
+.tweet header:hover {
 
     margin-top: 10px;
     background-color: hsla(225, 9%, 91%, 0.753);
@@ -41,13 +43,16 @@ section.tweet:hover header {
 
 }
 
-.tweet textarea {
+.tweet p {
 
     width: 100%;
     border-bottom-color: black;
     border-bottom: solid;
     border-bottom-width: 1px;
-    padding: 10px;
+    height: 100px;
+    white-space: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 }
 
