@@ -120,6 +120,13 @@ $.ajax('/tweets/', {
 };
 });
 
+$('#nav-bar button').click (function() {
+  $("section.new-tweet").slideToggle("slow", function() {
+    $("section.new-tweet textarea").focus();
+  });
+});
+
+
 
 });
 

@@ -30,3 +30,10 @@ height: 80px;
 margin-left: 10;
 
 }
+
+#nav-bar button {
+
+    float: right;
+    margin-top: 20px
+
+}
