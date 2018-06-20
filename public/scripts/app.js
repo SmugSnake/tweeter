@@ -57,14 +57,21 @@ function createTweetElement(tweet) {
     let $tweet = $('<article>').addClass('full tweet');
     var image = $('<img>').attr('src', tweet.user.avatars.small)
     var handle = $('<span>').text(tweet.user.handle).addClass('creator');
-    var name = $('<h2>').text(tweet.user.name);
+    var $name = $('<h2>').text(tweet.user.name);
     var $header = $('<header>')
     var createdDate = $('<span>').text(tweet.created_at).addClass('date created');
+    var $iconSpan = $('<span>').addClass('icons');
+    var icon1 = $('<i>').addClass('fab fa-font-awesome-flag');
+    var icon2 = $('<i>').addClass('fas fa-retweet');
+    var icon3 = $('<i>').addClass('fas fa-heart');
     var $footer = $('<footer>');
     var $content = $('<p>').text(tweet.content.text);
-    $header.append(image, handle, name);
-    $footer.append(createdDate);
-    $tweet.append($header, $footer, $content);
+    $name.append(image, handle);
+    $header.append($name);
+    $iconSpan.append(icon1, icon2, icon3);
+    $footer.append(createdDate, $iconSpan);
+    $tweet.append($header, $content, $footer);
+
     
     return $tweet;
 

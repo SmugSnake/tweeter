@@ -11,15 +11,14 @@ article.full.tweet {
 
 }
 
-section.tweet:hover header {
+article.full.tweet:hover header {
 
     filter: opacity(100%);
 }
 
 
-.tweet header:hover {
+.tweet header {
 
-    margin-top: 10px;
     background-color: hsla(225, 9%, 91%, 0.753);
     width: 100%;
     padding-bottom: 40px;
@@ -37,9 +36,10 @@ section.tweet:hover header {
 }
 
 
-.tweet.footer {
+.tweet footer {
 
-    float: right;
+    float: left;
+    width: 100%;
 
 }
 
@@ -53,6 +53,8 @@ section.tweet:hover header {
     white-space: initial;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 30px;
+    padding-left: 10px;
 
 }
 
@@ -68,10 +70,12 @@ section.tweet:hover header {
     width: 80px;
     height: 80px;
     float: left;
+    padding-bottom: 10px;
+    padding-right: 5px;
 
 }
 
-.tweet span.date created {
+.tweet span.date.created {
 
     float: left;
 
@@ -84,7 +88,7 @@ section.tweet:hover header {
 
 }
 
-section.tweet:hover span.icons {
+article.full.tweet:hover span.icons {
 
     visibility: visible;
 }
