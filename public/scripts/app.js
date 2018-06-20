@@ -91,16 +91,27 @@ $(document).ready(function () {
 
 $('form').on('submit', function (tweet) {
 tweet.preventDefault();
+console.log(tweet)
 var data = $('form').serialize();
+var message = $('form textarea').val();
 
+if (message.length > 140) {
+  alert("Message is too long. Remember, brevity is the soul of wit");
+  return;
+} else if (message.length <= 0) {
+  alert("Please write some text")
+  return;
+} else {
 $.ajax('/tweets/', {
   method: 'POST',
   data: data
 }).done(function () {
   console.log(data)
   $('form textarea').val('');
+})
+};
 });
-});
+
 
 function loadTweets() {
   $.ajax({
@@ -110,8 +121,8 @@ function loadTweets() {
       renderTweets(data)
     }
   });
-  console.log(data);
 };
 
 loadTweets();
 });
+
