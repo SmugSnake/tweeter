@@ -9,12 +9,14 @@ $(document).ready(function () {
 
 
   function createTweetElement(tweet) {
+    let date = humanizeDuration( + new Date() - tweet.created_at, { round: true, units: ['d', 'h']})
+
     let $tweet = $('<article>').addClass('full tweet');
-    var image = $('<img>').attr('src', tweet.user.avatars.small)
+    var image = $('<img>').attr('src', tweet.user.avatars.small);
     var handle = $('<span>').text(tweet.user.handle).addClass('creator');
     var $name = $('<h2>').text(tweet.user.name);
-    var $header = $('<header>')
-    var createdDate = $('<span>').text(tweet.created_at).addClass('date created');
+    var $header = $('<header>');
+    var createdDate = $('<span>').text(date).addClass('date created');
     var $iconSpan = $('<span>').addClass('icons');
     var icon1 = $('<i>').addClass('fab fa-font-awesome-flag');
     var icon2 = $('<i>').addClass('fas fa-retweet');
@@ -49,6 +51,7 @@ $(document).ready(function () {
       url: '/tweets/',
       success: function (data) {
         renderTweets(data);
+        $(".counter").html(140)
       }
     })
   };
