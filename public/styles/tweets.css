@@ -78,6 +78,7 @@ article.full.tweet:hover header {
 .tweet span.date.created {
 
     float: left;
+    font-size: .8em;
 
 }
 

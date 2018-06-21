@@ -34,6 +34,18 @@ margin-left: 10;
 #nav-bar button {
 
     float: right;
-    margin-top: 20px
+    color: #00a087;
+    height: 60px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    filter: opacity(90%);
+    cursor: pointer;
+}
+
+#nav-bar button:hover {
+
+    filter: opacity(100%);
+    color: black;
 
 }
