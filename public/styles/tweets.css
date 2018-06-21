@@ -38,22 +38,19 @@ article.full.tweet:hover header {
 
 .tweet footer {
 
-    float: left;
+   padding-bottom: 20px;
     width: 100%;
+    border-top: 2px solid grey;
 
 }
 
 .tweet p {
 
     width: 100%;
-    border-bottom-color: black;
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    height: 100px;
+    height: 80px;
     white-space: initial;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 30px;
     padding-left: 10px;
 
 }
@@ -62,6 +59,7 @@ article.full.tweet:hover header {
 
     float: right;
     color: grey;
+    font-size: .8em;
 
 }
 
@@ -78,7 +76,6 @@ article.full.tweet:hover header {
 .tweet span.date.created {
 
     float: left;
-    font-size: .8em;
 
 }
 

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-loadTweets()
+  loadTweets()
   /*
    * Client-side JS logic goes here
    * jQuery is already loaded
@@ -32,6 +32,9 @@ loadTweets()
 
   }
 
+  // loops through tweets
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
   function renderTweets(tweets) {
     $('section.tweet').empty();
     tweets.forEach(function (element) {
@@ -39,9 +42,6 @@ loadTweets()
       $('section.tweet').prepend($tweet);
     });
   }
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 
   function loadTweets() {
     $.ajax({
